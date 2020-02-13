@@ -12,7 +12,13 @@ import math
 #print the matrix such that it looks like
 #the template in the top comment
 def print_matrix( matrix ):
-    pass
+    for x in range(4):
+        line = ""
+        for y in range(len(matrix)):
+            if(matrix[y][x]//10 == 0): line += str(matrix[y][x]) + "   "
+            elif(matrix[y][x]//10 < 10): line += str(matrix[y][x]) + "  "
+            else: line += str(matrix[y][x]) + " "
+        print(line)
 
 #turn the paramter matrix into an identity matrix
 #you may assume matrix is square
