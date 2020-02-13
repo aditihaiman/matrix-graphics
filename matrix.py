@@ -23,7 +23,11 @@ def print_matrix( matrix ):
 #turn the paramter matrix into an identity matrix
 #you may assume matrix is square
 def ident( matrix ):
-    pass
+    for x in range(len(matrix)):
+        for y in range(len(matrix[x])):
+            matrix[x][y] = 0
+            if(x == y): matrix[x][y] = 1
+            
 
 #multiply m1 by m2, modifying m2 to be the product
 #m1 * m2 -> m2
