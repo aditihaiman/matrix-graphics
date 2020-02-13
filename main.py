@@ -18,5 +18,9 @@ print("\nTesting ident on matrix1:")
 ident(matrix)
 print_matrix(matrix)
 
+print("\nTesting matrix_mult:")
+matrix_mult(matrix, matrix2)
+print_matrix(matrix2)
+
 draw_lines( matrix, screen, color )
 #display(screen)

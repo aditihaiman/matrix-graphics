@@ -32,7 +32,9 @@ def ident( matrix ):
 #multiply m1 by m2, modifying m2 to be the product
 #m1 * m2 -> m2
 def matrix_mult( m1, m2 ):
-    pass
+    for y in range(len(m2[0])):
+        for x in range(len(m1)):
+            m2[x][y] += m2[x][y] * m1[y][x]
 
 
 
