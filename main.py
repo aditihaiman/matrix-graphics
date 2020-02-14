@@ -22,5 +22,17 @@ print("\nTesting matrix_mult:")
 matrix_mult(matrix, matrix2)
 print_matrix(matrix2)
 
+print("\nTesting matrix_mult (scaling by 2):")
+matrix = [[2, 0, 0, 0],[0, 2, 0, 0],[0, 0, 2, 0],[0, 0, 0, 2]]
+#print_matrix(matrix)
+matrix_mult(matrix,matrix2)
+print_matrix(matrix2)
+
+print("\nTesting matrix mult:")
+matrix = [[1, 2, 3, 4],[5, 6, 7, 8],[9, 10, 11, 12],[13, 14, 15, 16]]
+matrix2 = [[10, 15, 0, 1], [15, 20, 0, 1], [20, 25, 0, 1],[0, 0, 0, 1]]
+matrix_mult(matrix, matrix2)
+print_matrix(matrix2)
+
 draw_lines( matrix, screen, color )
 #display(screen)
