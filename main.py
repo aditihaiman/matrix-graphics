@@ -2,6 +2,7 @@ from display import *
 from draw import *
 from matrix import *
 import math
+import random
 
 screen = new_screen()
 color = [ 0, 255, 0 ]
@@ -74,17 +75,38 @@ for x in range(100):
 
 draw_lines( matrix, screen, color )
 
-color = [0, 0, 255]
+color = [255, 0, 0]
 matrix = []
     
 for x in range(100):
-    x0 = 10*math.cos(x)+250
-    y0 = 200*math.sin(x) + 200
+    x0 = 40*math.cos(x)+220
+    y0 = 10*math.sin(x) + 380
     add_point(matrix, x0, y0, 1)
 
 draw_lines( matrix, screen, color )
 
+matrix = []
+    
+for x in range(100):
+    x0 = 5*math.cos(x)+240
+    y0 = 5*math.sin(x) + 380
+    add_point(matrix, x0, y0, 1)
 
+draw_lines( matrix, screen, color )
+
+color = [255, 255, 255]
+for x in range(30):
+    matrix = []
+    randx = random.randint(0, 500)
+    randy = random.randint(0, 500)
+    for y in range(50):
+        x0 = 7*math.cos(y) + randx
+        y0 = 7*math.sin(y) + randy
+        add_point(matrix, x0, y0, 1)
+    draw_lines(matrix, screen, color)
 
 
 display(screen)
+save_ppm(screen, 'binary.ppm')
+save_ppm_ascii(screen, 'ascii.ppm')
+save_extension(screen, 'img.png')
