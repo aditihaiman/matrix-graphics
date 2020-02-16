@@ -94,7 +94,7 @@ for x in range(100):
 
 draw_lines( matrix, screen, color )
 
-color = [255, 255, 255]
+color = [255, 255, 255] #random circles
 for x in range(30):
     matrix = []
     randx = random.randint(0, 500)
@@ -102,6 +102,31 @@ for x in range(30):
     for y in range(50):
         x0 = 7*math.cos(y) + randx
         y0 = 7*math.sin(y) + randy
+        add_point(matrix, x0, y0, 1)
+    draw_lines(matrix, screen, color)
+    
+color = [255, 255, 0] #sun
+matrix = []
+for x in range(100):
+    x0 = 50*math.cos(x) + 25
+    y0 = 50*math.sin(x) + 475
+    add_point(matrix, x0, y0, 1)
+draw_lines(matrix, screen, color)
+
+color = [100, 100, 100] #tree
+matrix = []
+for x in range(100):
+    x0 = 10*math.cos(x) + 100
+    y0 = 10*math.sin(x) + x
+    add_point(matrix, x0, y0, 1)
+draw_lines(matrix, screen, color)
+
+color = [0, 255, 0] #tree
+for y in range(15):
+    matrix = []
+    for x in range(100):
+        x0 = 15*math.cos(x) + 25*math.sin(y) + 100
+        y0 = 15*math.sin(x) + 25*math.cos(y) + 100
         add_point(matrix, x0, y0, 1)
     draw_lines(matrix, screen, color)
 
