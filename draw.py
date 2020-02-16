@@ -3,7 +3,8 @@ from matrix import *
 
 
 def draw_lines( matrix, screen, color ):
-    pass
+    for x in range(len(matrix)-1):
+        draw_line(int(matrix[x][0]), int(matrix[x][1]), int(matrix[x+1][0]), int(matrix[x+1][1]), screen, color)
 
 def add_edge( matrix, x0, y0, z0, x1, y1, z1 ):
     matrix.append([x0, y0, z0, 1])
